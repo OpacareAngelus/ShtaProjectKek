@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentMenu">
+    <fragment
+        android:id="@+id/fragmentMenu"
+        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentMenu"
+        android:label="FragmentMenu">
+        <action
+            android:id="@+id/action_fragmentMenu_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentGame"
+        android:label="FragmentGame">
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentOver"
+            app:destination="@id/fragmentOver" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOver"
+        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentOver"
+        android:label="FragmentOver">
+        <action
+            android:id="@+id/action_fragmentOver_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+</navigation>

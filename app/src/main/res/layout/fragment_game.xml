@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_vert">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintBottom_toTopOf="@id/clBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="You need to find same blocks."
+            android:textColor="@color/much_light_blue"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/cl_top_object_height"
+            android:background="@drawable/frame_rounded"
+            android:padding="@dimen/padding_normal"
+            app:constraint_referenced_ids="tvScore, tvTime"
+            app:flow_horizontalGap="@dimen/flow_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHelper" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_time_string"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_small"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_score_string"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue"
+            android:textSize="@dimen/text_size_small"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.82"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clTop"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_normal"
+            app:constraint_referenced_ids="iv1Variant, iv2Variant, iv3Variant, iv4Variant, iv5Variant, iv6Variant, iv7Variant, iv8Variant, iv9Variant, iv10Variant, iv11Variant, iv12Variant, iv13Variant, iv14Variant, iv15Variant, iv16Variant"
+            app:flow_horizontalGap="@dimen/flow_gap"
+            app:flow_maxElementsWrap="4"
+            app:flow_wrapMode="aligned"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv1Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv2Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv3Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv4Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv5Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv6Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv7Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv8Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv9Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv10Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv11Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv12Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv13Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv14Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv15Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv16Variant"
+            android:layout_width="@dimen/variant_size"
+            android:layout_height="@dimen/variant_size"
+            android:background="@drawable/group_sixteen"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

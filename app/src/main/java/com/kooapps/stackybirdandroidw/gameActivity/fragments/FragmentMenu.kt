@@ -17,7 +17,7 @@ class FragmentMenu : BaseFragment<FragmentMenuBinding>(FragmentMenuBinding::infl
     private fun setListener() {
         with(binding) {
             btnStartGame.setOnClickListener {
-                findNavController().navigate(FragmentMenuDirections.actionFragmentMenuToFragmentGame())
+                findNavController().navigate(FragmentMenuDirections.actionFragmentMenuToFragmentGame(""))
             }
             btnExit.setOnClickListener {
                 requireActivity().finish()

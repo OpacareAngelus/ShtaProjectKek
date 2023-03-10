@@ -43,6 +43,7 @@ class FragmentGameViewModel : ViewModel() {
 
     fun setFirstBlock(bitmap: Bitmap) {
         _bitmapFirstBlock.value = bitmap
+        addAmountSameBlock()
     }
 
     fun startTimer() {
@@ -92,6 +93,6 @@ class FragmentGameViewModel : ViewModel() {
         const val ONE_SECOND_DELAY = 1000L
         const val SCORE_FOR_CORRECT_ANSWER = 5
         const val AMOUNT_BLOCKS_FOR_WIN = 3
-        const val TIME_FOR_CORRECT_ANSWER = 5
+        const val TIME_FOR_CORRECT_ANSWER = 3
     }
 }

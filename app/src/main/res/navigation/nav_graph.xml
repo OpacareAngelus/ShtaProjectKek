@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_fragmentGame_to_fragmentOver"
             app:destination="@id/fragmentOver" />
+        <argument
+            android:name="score"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/fragmentOver"
@@ -27,5 +30,9 @@
         <action
             android:id="@+id/action_fragmentOver_to_fragmentGame"
             app:destination="@id/fragmentGame" />
+        <argument
+            android:name="score"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

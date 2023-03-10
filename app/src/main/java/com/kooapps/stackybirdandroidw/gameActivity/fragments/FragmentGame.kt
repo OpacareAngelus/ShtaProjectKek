@@ -123,7 +123,7 @@ class FragmentGame : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
             }
             viewModel.timeSubject.observe(viewLifecycleOwner) {
                 if (it <= 0) {
-                    findNavController().navigate(FragmentGameDirections.actionFragmentGameToFragmentOver())
+                    findNavController().navigate(FragmentGameDirections.actionFragmentGameToFragmentOver(viewModel.scoreSubject.value.toString()))
                 }
             }
         }

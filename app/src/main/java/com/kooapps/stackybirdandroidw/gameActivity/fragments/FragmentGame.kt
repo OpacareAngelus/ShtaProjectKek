@@ -71,6 +71,10 @@ class FragmentGame : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
 
     private fun createNewField() {
         CoroutineScope(Dispatchers.Main).launch {
+            println("!!!!!!!!!!!!!!!!!!!!!")
+            println(viewModel.gameStarted.value)
+            println(viewModel.amountSameBlocks.value)
+            println("!!!!!!!!!!!!!!!!!!!!!")
             for (i in 1..16) {
                 val imageViewId =
                     resources.getIdentifier("iv$i" + "Variant", "id", requireActivity().packageName)

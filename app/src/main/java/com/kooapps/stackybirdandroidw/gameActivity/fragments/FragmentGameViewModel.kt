@@ -66,9 +66,15 @@ class FragmentGameViewModel : ViewModel() {
 
     fun startNewRound() {
         setScore(_scoreSubject.value!!.plus(SCORE_FOR_CORRECT_ANSWER * AMOUNT_BLOCKS_FOR_WIN))
+        setTime(_timeSubject.value!!.plus(TIME_FOR_CORRECT_ANSWER))
         refreshAmountSameBlocks()
+        refreshFirstBlock()
         setGameStatus()
         stopTimer()
+    }
+
+    private fun refreshFirstBlock() {
+        _bitmapFirstBlock.value == null
     }
 
     fun getIncorrectVariant() {
@@ -86,6 +92,6 @@ class FragmentGameViewModel : ViewModel() {
         const val ONE_SECOND_DELAY = 1000L
         const val SCORE_FOR_CORRECT_ANSWER = 5
         const val AMOUNT_BLOCKS_FOR_WIN = 3
-        const val TIME_FOR_CORRECT_ANSWER = 2
+        const val TIME_FOR_CORRECT_ANSWER = 5
     }
 }

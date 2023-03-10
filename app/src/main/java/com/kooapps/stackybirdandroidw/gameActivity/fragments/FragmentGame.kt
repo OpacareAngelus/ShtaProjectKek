@@ -50,23 +50,24 @@ class FragmentGame : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
     private fun setListeners() {
         for (imageView in imageViewsArray) {
             imageView.setOnClickListener {
+                println("!!!!!!!!!!!!!!")
+                println(viewModel.bitmapFirstBlock.value)
+                println((imageView.drawable as BitmapDrawable).bitmap)
+                println("!!!!!!!!!!!!!")
                 if (viewModel.gameStarted.value == true) {
                     imageView.foreground = null
                     if (viewModel.bitmapFirstBlock.value == null) {
                         viewModel.setFirstBlock((imageView.drawable as BitmapDrawable).bitmap)
+                        imageView.background = null
                     } else {
-                        if ((imageView.drawable as BitmapDrawable).bitmap.sameAs(viewModel.bitmapFirstBlock.value)) {
-                            checkVariant()
+                        if ((imageView.drawable as BitmapDrawable).bitmap.sameAs(viewModel.bitmapFirstBlock.value) && imageView.background != null) {
                             viewModel.addAmountSameBlock()
+                            imageView.background = null
                         } else viewModel.getIncorrectVariant()
                     }
                 }
             }
         }
-    }
-
-    private fun checkVariant() {
-
     }
 
     private fun createNewField() {
@@ -80,6 +81,7 @@ class FragmentGame : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
                     resources.getIdentifier("iv$i" + "Variant", "id", requireActivity().packageName)
                 val imageView = requireActivity().findViewById<ImageView>(imageViewId)
                 imageView.setImageResource(randomBlocks())
+                imageView.background = requireActivity().getDrawable(R.drawable.group_sixteen)
                 imageView.foreground = null
             }
             delay(SHOWING_TIME)

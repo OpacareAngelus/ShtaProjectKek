@@ -23,8 +23,8 @@ class FragmentGameViewModel : ViewModel() {
     private val _gameStarted = MutableLiveData<Boolean>()
     val gameStarted: LiveData<Boolean> = _gameStarted
 
-    private val _bitmapFirstBlock = MutableLiveData<Bitmap>()
-    val bitmapFirstBlock: LiveData<Bitmap> = _bitmapFirstBlock
+    private val _bitmapFirstBlock = MutableLiveData<Bitmap?>()
+    val bitmapFirstBlock: LiveData<Bitmap?> = _bitmapFirstBlock
 
     init {
         _timeSubject.postValue(STARTING_TIME)
@@ -74,7 +74,7 @@ class FragmentGameViewModel : ViewModel() {
     }
 
     private fun refreshFirstBlock() {
-        _bitmapFirstBlock.value == null
+        _bitmapFirstBlock.postValue(null)
     }
 
     fun getIncorrectVariant() {

@@ -15,34 +15,34 @@ import androidx.appcompat.app.AppCompatActivity
 class InfiActivity : AppCompatActivity() {
 
 
-    private val INPUT_FILE_REQUEST_CODE = 1
-    protected var mRequestCodeFilePicker: Int = INPUT_FILE_REQUEST_CODE
-    var filePathCallbacks: ValueCallback<Array<Uri>>? = null
+    private val INPUT_FILE_REQUEST_CODE_WEKQWHEJKQWEHQWKJEK = 1
+    protected var mRequestCodeFilePickerwqkleqwhejkhqwekjqwehqw: Int = INPUT_FILE_REQUEST_CODE_WEKQWHEJKQWEHQWKJEK
+    var filePathCallbacksqwlekqweklqejwqlekjqw: ValueCallback<Array<Uri>>? = null
 
-    lateinit var webBew: WebView
+    lateinit var webBewewqehqwjkehqwkqjheqkwe: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        webBew = WebView(this)
-        setOfSett()
-        setContentView(webBew)
+        webBewewqehqwjkehqwkqjheqkwe = WebView(this)
+        setOfSettewqkhqwjkehqejkqwhe()
+        setContentView(webBewewqehqwjkehqwkqjheqkwe)
 
-        webBew.webViewClient = object : WebViewClient() {
+        webBewewqehqwjkehqwkqjheqkwe.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
                 view: WebView,
                 url: String
             ): Boolean {
 
-                val pm = applicationContext.packageManager
-                val isInstalled = isPackageInstalled("org.telegram.messenger", pm)
+                val pmwejhqwejkqwhekqjehqwekjqwh = applicationContext.packageManager
+                val isInstalledjwekrhwkrjwehrkwejrhwjkr = isPackageInstalledwerewjkrhwerjkhwerkwjhrkwe("org.telegram.messenger", pmwejhqwejkqwhekqjehqwekjqwh)
 
                 try {
                     if (URLUtil.isNetworkUrl(url)) {
                         return false
                     }
-                    if (isInstalled) {
-                        val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse(url)
-                        this@InfiActivity.startActivity(intent)
+                    if (isInstalledjwekrhwkrjwehrkwejrhwjkr) {
+                        val intentwejkeljkwlqkejqwklejqweqw = Intent(Intent.ACTION_VIEW)
+                        intentwejkeljkwlqkejqwklejqweqw.data = Uri.parse(url)
+                        this@InfiActivity.startActivity(intentwejkeljkwlqkejqwklejqweqw)
                     } else {
                         Toast.makeText(
                             this@InfiActivity,
@@ -75,52 +75,55 @@ class InfiActivity : AppCompatActivity() {
             }
         }
 
-        webBew.webChromeClient = object : WebChromeClient() {
+        webBewewqehqwjkehqwkqjheqkwe.webChromeClient = object : WebChromeClient() {
             override fun onShowFileChooser(
                 webView: WebView?,
                 filePathCallback: ValueCallback<Array<Uri>>?,
                 fileChooserParams: FileChooserParams
             ):Boolean {
 
-                filePathCallbacks?.onReceiveValue(null)
-                filePathCallbacks = filePathCallback
+                filePathCallbacksqwlekqweklqejwqlekjqw?.onReceiveValue(null)
+                filePathCallbacksqwlekqweklqejwqlekjqw = filePathCallback
 
                 try {
-                    openChooser()
+                    openChooserewrkljelrkjwerkwelrkwej()
                 } catch (e: java.lang.Exception) {
                     Toast.makeText(this@InfiActivity, e.toString(), Toast.LENGTH_LONG).show()
                 }
                 return true
             }
         }
-        webBew.loadUrl(urururururururur())
+        webBewewqehqwjkehqwkqjheqkwe.loadUrl(ururururururururqwejkqwhejkqwehkwqjqeh())
     }
 
-    fun setOfSett() {
+    fun setOfSettewqkhqwjkehqejkqwhe() {
         CookieManager.getInstance().setAcceptCookie(true)
-        CookieManager.getInstance().setAcceptThirdPartyCookies( webBew, true)
-        val webViewSet = webBew.settings
-        webViewSet.javaScriptEnabled = true
-        webViewSet.useWideViewPort = true
-        webViewSet.loadWithOverviewMode = true
-        webViewSet.allowFileAccess = true
-        webViewSet.domStorageEnabled = true
-        webViewSet.userAgentString = webViewSet.userAgentString.replace("; wv", "")
-        webViewSet.javaScriptCanOpenWindowsAutomatically = true
-        webViewSet.setSupportMultipleWindows(false)
-        webViewSet.displayZoomControls = false
-        webViewSet.builtInZoomControls = true
-        webViewSet.allowFileAccess = true
-        webViewSet.allowContentAccess = true
-        webViewSet.setSupportZoom(true)
-        webViewSet.pluginState = WebSettings.PluginState.ON
-        webViewSet.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-        webViewSet.cacheMode = WebSettings.LOAD_DEFAULT
-        webViewSet.allowContentAccess = true
-        webViewSet.mediaPlaybackRequiresUserGesture = false
+        CookieManager.getInstance().setAcceptThirdPartyCookies( webBewewqehqwjkehqwkqjheqkwe, true)
+        val webViewSetweklqwjeklqwejl = webBewewqehqwjkehqwkqjheqkwe.settings
+        webViewSetweklqwjeklqwejl.javaScriptEnabled = true
+        webViewSetweklqwjeklqwejl.useWideViewPort = true
+        webViewSetweklqwjeklqwejl.loadWithOverviewMode = true
+        webViewSetweklqwjeklqwejl.allowFileAccess = true
+        webViewSetweklqwjeklqwejl.domStorageEnabled = true
+        webViewSetweklqwjeklqwejl.userAgentString = webViewSetweklqwjeklqwejl.userAgentString.replace("; wv", "")
+        webViewSetweklqwjeklqwejl.javaScriptCanOpenWindowsAutomatically = true
+        webViewSetweklqwjeklqwejl.setSupportMultipleWindows(false)
+        webViewSetweklqwjeklqwejl.displayZoomControls = false
+        webViewSetweklqwjeklqwejl.builtInZoomControls = true
+        webViewSetweklqwjeklqwejl.allowFileAccess = true
+        webViewSetweklqwjeklqwejl.allowContentAccess = true
+        webViewSetweklqwjeklqwejl.setSupportZoom(true)
+        webViewSetweklqwjeklqwejl.pluginState = WebSettings.PluginState.ON
+        webViewSetweklqwjeklqwejl.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+        webViewSetweklqwjeklqwejl.cacheMode = WebSettings.LOAD_DEFAULT
+        webViewSetweklqwjeklqwejl.allowContentAccess = true
+        webViewSetweklqwjeklqwejl.mediaPlaybackRequiresUserGesture = false
     }
 
-    private fun isPackageInstalled(packageName: String, packageManager: PackageManager): Boolean {
+    var exitexitexitexitewjqlqkejqwlejqwelkqj = false
+    var urlfifififwqekljqwheklqwjehqwek = ""
+
+    private fun isPackageInstalledwerewjkrhwerjkhwerkwjhrkwe(packageName: String, packageManager: PackageManager): Boolean {
         return try {
             packageManager.getPackageInfo(packageName, 0)
             true
@@ -129,92 +132,89 @@ class InfiActivity : AppCompatActivity() {
         }
     }
 
-    var exitexitexitexit = false
-    var urlfififif = ""
+    fun saveUrlwelkqwjeqweklqwjekl(lurlurlurlurlurewklrjwelrwerklwejrw: String?) {
+        if (!lurlurlurlurlurewklrjwelrwerklwejrw!!.contains("t.me")) {
 
-    fun saveUrl(lurlurlurlurlur: String?) {
-        if (!lurlurlurlurlur!!.contains("t.me")) {
+            if (urlfifififwqekljqwheklqwjehqwek == "") {
 
-            if (urlfififif == "") {
-
-                    urlfififif = getSharedPreferences(
+                    urlfifififwqekljqwheklqwjehqwek = getSharedPreferences(
                         "SP_WEBVIEW_PREFS",
                         AppCompatActivity.MODE_PRIVATE
                     ).getString(
                         "SAVED_URL",
-                        lurlurlurlurlur
+                        lurlurlurlurlurewklrjwelrwerklwejrw
                     ).toString()
 
-                val spspspspsppspspsp =
+                val spspspspsppspspspewklqejqwlekqwjeklqwej =
                     getSharedPreferences(
                         "SP_WEBVIEW_PREFS",
                         AppCompatActivity.MODE_PRIVATE
                     )
-                val ededededededed = spspspspsppspspsp?.edit()
-                ededededededed?.putString("SAVED_URL", lurlurlurlurlur)
-                ededededededed?.apply()
+                val edededededededqweklwjelqwjkewlk = spspspspsppspspspewklqejqwlekqwjeklqwej?.edit()
+                edededededededqweklwjelqwjkewlk?.putString("SAVED_URL", lurlurlurlurlurewklrjwelrwerklwejrw)
+                edededededededqweklwjelqwjkewlk?.apply()
             }
         }
     }
 
+    private fun openChooserewrkljelrkjwerkwelrkwej() {
+
+        val chooserIntentwekjqwldkjflwfjklwq = Intent(Intent.ACTION_GET_CONTENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            type = "image/*"
+        }
+        val intentzxbbczxmnczxbmnzxbc = Intent(Intent.ACTION_CHOOSER).apply {
+            putExtra(Intent.EXTRA_INTENT, chooserIntentwekjqwldkjflwfjklwq)
+            putExtra(Intent.EXTRA_TITLE, "Image Chooser")
+        }
+        startActivityForResult(Intent.createChooser(intentzxbbczxmnczxbmnzxbc, "File Chooser"), INPUT_FILE_REQUEST_CODE_WEKQWHEJKQWEHQWKJEK);
+    }
+
     override fun onBackPressed() {
-        if (webBew.canGoBack()) {
-            if (exitexitexitexit) {
-                webBew.stopLoading()
-                webBew.loadUrl(urlfififif)
+        if (webBewewqehqwjkehqwkqjheqkwe.canGoBack()) {
+            if (exitexitexitexitewjqlqkejqwlejqwelkqj) {
+                webBewewqehqwjkehqwkqjheqkwe.stopLoading()
+                webBewewqehqwjkehqwkqjheqkwe.loadUrl(urlfifififwqekljqwheklqwjehqwek)
             }
-            this.exitexitexitexit = true
-            webBew.goBack()
+            this.exitexitexitexitewjqlqkejqwlejqwelkqj = true
+            webBewewqehqwjkehqwkqjheqkwe.goBack()
             Handler(Looper.getMainLooper()).postDelayed({
-                exitexitexitexit = false
+                exitexitexitexitewjqlqkejqwlejqwelkqj = false
             }, 2000)
 
         } else {
             super.onBackPressed()
         }
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == INPUT_FILE_REQUEST_CODE && (resultCode == RESULT_OK)) {
+        if (requestCode == INPUT_FILE_REQUEST_CODE_WEKQWHEJKQWEHQWKJEK && (resultCode == RESULT_OK)) {
 
-            if ((null == filePathCallbacks )) {
+            if ((null == filePathCallbacksqwlekqweklqejwqlekjqw )) {
                 return;
             } else {
                 val dataString: String? = data?.dataString
 
                 if (dataString != null) {
                     val result = arrayOf(Uri.parse(dataString))
-                    filePathCallbacks?.onReceiveValue(result)
-                    filePathCallbacks = null
+                    filePathCallbacksqwlekqweklqejwqlekjqw?.onReceiveValue(result)
+                    filePathCallbacksqwlekqweklqejwqlekjqw = null
                 }
             }
         }
     }
-    private fun openChooser() {
 
-        val chooserIntent = Intent(Intent.ACTION_GET_CONTENT).apply {
-            addCategory(Intent.CATEGORY_OPENABLE)
-            type = "image/*"
-        }
-        val intent = Intent(Intent.ACTION_CHOOSER).apply {
-            putExtra(Intent.EXTRA_INTENT, chooserIntent)
-            putExtra(Intent.EXTRA_TITLE, "Image Chooser")
-        }
-        startActivityForResult(Intent.createChooser(intent, "File Chooser"), INPUT_FILE_REQUEST_CODE);
-    }
-
-    private fun urururururururur(): String {
+    private fun ururururururururqwejkqwhejkqwehkwqjqeh(): String {
 
 
-        val sharPre = getSharedPreferences("NEWPR",
+        val sharPreweqeqwiqdo = getSharedPreferences("NEWPR",
             Context.MODE_PRIVATE)
 
-        val link = sharPre.getString("link", null)
-        Log.d("Lololol", link.toString())
+        val linkeweqweqwehd = sharPreweqeqwiqdo.getString("link", null)
+        Log.d("Lololol", linkeweqweqwehd.toString())
 
-        return link.toString()
+        return linkeweqweqwehd.toString()
 
     }
 }

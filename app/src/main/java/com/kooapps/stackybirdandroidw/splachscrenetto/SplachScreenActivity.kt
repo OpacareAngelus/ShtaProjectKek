@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.kooapps.stackybirdandroidw.R
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampampapapapapapapapa
 import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
 import com.kooapps.stackybirdandroidw.helperititka.Helper
 import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
@@ -19,21 +19,21 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class SplachScreenActivity : AppCompatActivity() {
-    private var mCompositeDisposable: CompositeDisposable? = null
+    private var mCompositeDisposableewqekjqwehqkweqwjkewhk: CompositeDisposable? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splach_screen)
 
-        val help = Helper()
+        val helpqwekjqwhejkqwehqwkeqwehqwkeq = Helper()
 
 
-        val prefs = getSharedPreferences("ActivityPREF", MODE_PRIVATE)
-        if (prefs.getBoolean("activity_exec", false)) {
-            val prefsInception = getSharedPreferences("NEWPR", Context.MODE_PRIVATE)
-            val entryCode =  prefsInception.getString("ENTRY_CODE", "0")
-            if (entryCode == "web"){
+        val prefswerwehrjkwehrwejkrw = getSharedPreferences("ActivityPREF", MODE_PRIVATE)
+        if (prefswerwehrjkwehrwejkrw.getBoolean("activity_exec", false)) {
+            val prefsInceptioneqweklqweklqwejklqwe = getSharedPreferences("NEWPR", Context.MODE_PRIVATE)
+            val entryCodeqweqweqweqweweq =  prefsInceptioneqweklqweklqwejklqwe.getString("ENTRY_CODE", "0")
+            if (entryCodeqweqweqweqweweq == "web"){
                 startActivity(Intent(this, InfiActivity::class.java))
                 finish()
             } else {
@@ -41,26 +41,26 @@ class SplachScreenActivity : AppCompatActivity() {
                 finish()
             }
         } else {
-            val exec = prefs.edit()
-            exec.putBoolean("activity_exec", true)
-            exec.apply()
+            val execwqeqwjheqwejkhqwk = prefswerwehrjkwehrwejkrw.edit()
+            execwqeqwjheqwejkhqwk.putBoolean("activity_exec", true)
+            execwqeqwjheqwejkhqwk.apply()
 
-            help.deepL(this)
+            helpqwekjqwhejkqwehqwkeqwehqwkeq.deepLeqwkleqwjheklqwhddweqedqw(this)
 
 
-            mCompositeDisposable = CompositeDisposable()
+            mCompositeDisposableewqekjqwehqkweqwjkewhk = CompositeDisposable()
 
-            val requestInterface = Retrofit.Builder()
+            val requestInterfaceweqjkehqwkeqwheqwjkeh = Retrofit.Builder()
                 .baseUrl("http://deluxeodysseus.xyz/")
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .build().create(Helper.RequestInterface::class.java)
+                .build().create(Helper.RequestInterfacewewqheqwjkehqwkeq::class.java)
 
-            mCompositeDisposable?.add(
-                requestInterface.getData()
+            mCompositeDisposableewqekjqwehqkweqwjkewhk?.add(
+                requestInterfaceweqjkehqwkeqwheqwjkeh.getDatakelqwjelqjkqwelj()
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io())
-                    .subscribe({ response -> onResponse(response) }, { t -> onFailure(t) })
+                    .subscribe({ response -> onResponseweqwewgejqwhegwqjehqwgeqj(response) }, { t -> onFailurewewqeqweqwgheqwjheqwg(t) })
             )
         }
 
@@ -69,16 +69,16 @@ class SplachScreenActivity : AppCompatActivity() {
 
 
     }
-    private fun onFailure(t: Throwable) {
-        Toast.makeText(this,t.message, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun onResponse(response: Helper.RetroB) {
-        pampam["AppsCh"] = response.appsChecker
-        pampam["GeoHose"] = response.geo
-        pampam["View"] = response.view
+    private fun onResponseweqwewgejqwhegwqjehqwgeqj(response: Helper.RetroBewqkleejwlkejqwelwe) {
+        pampampapapapapapapapa["AppsCh"] = response.odysseusappsChecker
+        pampampapapapapapapapa["GeoHose"] = response.odysseusgeo
+        pampampapapapapapapapa["View"] = response.odysseusview
         startActivity(Intent(this, SecondActivity::class.java))
         finish()
+    }
+
+    private fun onFailurewewqeqweqwgheqwjheqwg(t: Throwable) {
+        Toast.makeText(this,t.message, Toast.LENGTH_SHORT).show()
     }
 
 

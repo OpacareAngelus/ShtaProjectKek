@@ -16,36 +16,36 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class SecondActivity : AppCompatActivity() {
-    private var mCompositeDisposable: CompositeDisposable? = null
+    private var mCompositeDisposableeqwehqwejkqwhekqwjeqwe: CompositeDisposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        mCompositeDisposable = CompositeDisposable()
+        mCompositeDisposableeqwehqwejkqwhekqwjeqwe = CompositeDisposable()
 
 
-        val reqTwo = Retrofit.Builder()
+        val reqTwoweqeqweqweqweqweqw = Retrofit.Builder()
             .baseUrl("http://pro.ip-api.com/")
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .build().create(Helper.RequestA::class.java)
+            .build().create(Helper.RequestAwlkejqwlekqwjelqwe::class.java)
 
 
-        mCompositeDisposable?.add(
-            reqTwo.getDataA()
+        mCompositeDisposableeqwehqwejkqwhekqwjeqwe?.add(
+            reqTwoweqeqweqweqweqweqw.getDataAweklqjeqwklejqwelkqwjqklejqw()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribe({ response -> onResponse(response) }, { t -> onFailure(t) })
+                .subscribe({ response -> onResponseeqwewjkeqwhejkqwheqwkejqw(response) }, { t -> onFailureewqejkwhqjkqwehwq(t) })
         )
     }
 
-    private fun onFailure(t: Throwable) {
+    private fun onFailureewqejkwhqjkqwehwq(t: Throwable) {
         Toast.makeText(this,t.message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun onResponse(response: Helper.RetroA) {
-        MamaClass.pampam.put("GEO", response.countryCode)
+    private fun onResponseeqwewjkeqwhejkqwheqwkejqw(response: Helper.RetroArwejkrhwekrjwehr) {
+        MamaClass.pampampapapapapapapapa.put("GEO", response.countryCode)
         startActivity(Intent(this, MainActivity::class.java))
     }
 

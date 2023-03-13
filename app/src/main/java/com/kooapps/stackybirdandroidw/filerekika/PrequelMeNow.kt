@@ -138,8 +138,6 @@ class PrequelMeNow : AppCompatActivity() {
                     shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
                     startActivity(Intent(this, InfluinitiActivity::class.java))
                     finish()
-
-                    Toast.makeText(this, "Null FB", Toast.LENGTH_LONG).show()
                 } else if (geoHostqweqwdsqweqw!!.contains(geoqweqw455weqwe.toString())) {
                     linkqwejkhqwekqwj = "$viewqweqwesdfwqe$sub3wqkejqwhejkqwh$instIDqweqweqwdsdqwweqwe&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$orgwqejkqheqjke"
                     shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()

@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.kooapps.stackybirdandroidw.R
-import com.kooapps.stackybirdandroidw.helperititka.Helper
-import com.kooapps.stackybirdandroidw.mainactivitydsfklsdjfk.MainActivity
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass
+import com.kooapps.stackybirdandroidw.helperititka.HelperPelper
+import com.kooapps.stackybirdandroidw.mainactivitydsfklsdjfk.PainAct
+import com.kooapps.stackybirdandroidw.mamitaclasita.MadreClasses
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -15,7 +15,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class SecondActivity : AppCompatActivity() {
+class VtoroeActivity : AppCompatActivity() {
     private var mCompositeDisposableeqwehqwejkqwhekqwjeqwe: CompositeDisposable? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class SecondActivity : AppCompatActivity() {
             .baseUrl("http://pro.ip-api.com/")
             .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .build().create(Helper.RequestAwlkejqwlekqwjelqwe::class.java)
+            .build().create(HelperPelper.RequestAwlkejqwlekqwjelqwe::class.java)
 
 
         mCompositeDisposableeqwehqwejkqwhekqwjeqwe?.add(
@@ -44,9 +44,9 @@ class SecondActivity : AppCompatActivity() {
         Toast.makeText(this,t.message, Toast.LENGTH_SHORT).show()
     }
 
-    private fun onResponseeqwewjkeqwhejkqwheqwkejqw(response: Helper.RetroArwejkrhwekrjwehr) {
-        MamaClass.pampampapapapapapapapa.put("GEO", response.countryCode)
-        startActivity(Intent(this, MainActivity::class.java))
+    private fun onResponseeqwewjkeqwhejkqwheqwkejqw(response: HelperPelper.RetroArwejkrhwekrjwehr) {
+        MadreClasses.pampampapapapapapapapa.put("GEO", response.countryCode)
+        startActivity(Intent(this, PainAct::class.java))
     }
 
 

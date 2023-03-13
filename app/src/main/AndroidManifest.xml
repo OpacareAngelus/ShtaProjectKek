@@ -15,7 +15,7 @@
     </queries>
 
     <application
-        android:name=".mamitaclasita.MamaClass"
+        android:name=".mamitaclasita.MadreClasses"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -27,13 +27,13 @@
             android:name=".gamamama.gameActivity.GamefiAct"
             android:exported="false" />
         <activity
-            android:name=".filerekika.FilerMeNow"
+            android:name=".filerekika.PrequelMeNow"
             android:exported="false" />
         <activity
-            android:name=".secondactivitita.SecondActivity"
+            android:name=".secondactivitita.VtoroeActivity"
             android:exported="false" />
         <activity
-            android:name=".splachscrenetto.SplachScreenActivity"
+            android:name=".splachscrenetto.SplachScreamDija"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,12 +50,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".infiniti.InfiActivity"
+            android:name=".infiniti.InfluinitiActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".mainactivitydsfklsdjfk.MainActivity"
+            android:name=".mainactivitydsfklsdjfk.PainAct"
             android:exported="false"
             android:launchMode="singleInstance" />
 

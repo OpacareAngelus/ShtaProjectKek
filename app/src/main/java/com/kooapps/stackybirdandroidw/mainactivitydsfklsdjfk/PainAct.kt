@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampampapapapapapapapa
+import com.kooapps.stackybirdandroidw.mamitaclasita.MadreClasses.Companion.pampampapapapapapapapa
 import com.kooapps.stackybirdandroidw.R
-import com.kooapps.stackybirdandroidw.filerekika.FilerMeNow
+import com.kooapps.stackybirdandroidw.filerekika.PrequelMeNow
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Observer
 import io.reactivex.rxjava3.disposables.Disposable
@@ -19,7 +19,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
-class MainActivity : AppCompatActivity() {
+class PainAct : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         if(pampampapapapapapapapa["AppsCh"] == "1") {
             appsSignwerwrwerrsdfwe(application, this)
         } else {
-            startActivity(Intent(this, FilerMeNow::class.java))
+            startActivity(Intent(this, PrequelMeNow::class.java))
         }
 
         GlobalScope.launch {
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 override fun onComplete() {
                     Log.d("ObseObse","onComplete");
-                    startActivity(Intent(this@MainActivity, FilerMeNow::class.java))
+                    startActivity(Intent(this@PainAct, PrequelMeNow::class.java))
                     finish()
                 }
                 override fun onNext(t: String) {

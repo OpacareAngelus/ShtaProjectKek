@@ -6,11 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.kooapps.stackybirdandroidw.R
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampampapapapapapapapa
+import com.kooapps.stackybirdandroidw.mamitaclasita.MadreClasses.Companion.pampampapapapapapapapa
 import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
-import com.kooapps.stackybirdandroidw.helperititka.Helper
-import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
-import com.kooapps.stackybirdandroidw.secondactivitita.SecondActivity
+import com.kooapps.stackybirdandroidw.helperititka.HelperPelper
+import com.kooapps.stackybirdandroidw.infiniti.InfluinitiActivity
+import com.kooapps.stackybirdandroidw.secondactivitita.VtoroeActivity
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -18,7 +18,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-class SplachScreenActivity : AppCompatActivity() {
+class SplachScreamDija : AppCompatActivity() {
     private var mCompositeDisposableewqekjqwehqkweqwjkewhk: CompositeDisposable? = null
 
 
@@ -26,7 +26,7 @@ class SplachScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splach_screen)
 
-        val helpqwekjqwhejkqwehqwkeqwehqwkeq = Helper()
+        val helpqwekjqwhejkqwehqwkeqwehqwkeq = HelperPelper()
 
 
         val prefswerwehrjkwehrwejkrw = getSharedPreferences("ActivityPREF", MODE_PRIVATE)
@@ -34,7 +34,7 @@ class SplachScreenActivity : AppCompatActivity() {
             val prefsInceptioneqweklqweklqwejklqwe = getSharedPreferences("NEWPR", Context.MODE_PRIVATE)
             val entryCodeqweqweqweqweweq =  prefsInceptioneqweklqweklqwejklqwe.getString("ENTRY_CODE", "0")
             if (entryCodeqweqweqweqweweq == "web"){
-                startActivity(Intent(this, InfiActivity::class.java))
+                startActivity(Intent(this, InfluinitiActivity::class.java))
                 finish()
             } else {
                 startActivity(Intent(this, GamefiAct::class.java))
@@ -54,7 +54,7 @@ class SplachScreenActivity : AppCompatActivity() {
                 .baseUrl("http://deluxeodysseus.xyz/")
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .build().create(Helper.RequestInterfacewewqheqwjkehqwkeq::class.java)
+                .build().create(HelperPelper.RequestInterfacewewqheqwjkehqwkeq::class.java)
 
             mCompositeDisposableewqekjqwehqkweqwjkewhk?.add(
                 requestInterfaceweqjkehqwkeqwheqwjkeh.getDatakelqwjelqjkqwelj()
@@ -69,11 +69,11 @@ class SplachScreenActivity : AppCompatActivity() {
 
 
     }
-    private fun onResponseweqwewgejqwhegwqjehqwgeqj(response: Helper.RetroBewqkleejwlkejqwelwe) {
+    private fun onResponseweqwewgejqwhegwqjehqwgeqj(response: HelperPelper.RetroBewqkleejwlkejqwelwe) {
         pampampapapapapapapapa["AppsCh"] = response.odysseusappsChecker
         pampampapapapapapapapa["GeoHose"] = response.odysseusgeo
         pampampapapapapapapapa["View"] = response.odysseusview
-        startActivity(Intent(this, SecondActivity::class.java))
+        startActivity(Intent(this, VtoroeActivity::class.java))
         finish()
     }
 

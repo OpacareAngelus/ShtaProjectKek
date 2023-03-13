@@ -7,17 +7,17 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerLib
-import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
+import com.kooapps.stackybirdandroidw.infiniti.InfluinitiActivity
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
-import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampampapapapapapapapa
+import com.kooapps.stackybirdandroidw.mamitaclasita.MadreClasses.Companion.pampampapapapapapapapa
 import com.kooapps.stackybirdandroidw.R
 import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
 import org.json.JSONException
 import org.json.JSONObject
 
 
-class FilerMeNow : AppCompatActivity() {
+class PrequelMeNow : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -117,14 +117,14 @@ class FilerMeNow : AppCompatActivity() {
                         "$viewqweqwesdfwqe$sub1erwkjhrjkweh$appsDataqweqweqweqweqweeqw&$sub3wqkejqwhejkqwh$afIdeqwdfjhfgh&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$namqwejkqwhk"
                     shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
                     shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
+                    startActivity(Intent(this, InfluinitiActivity::class.java))
                     finish()
                 } else if (depDataqweqweqwqweqwe != null || geoHostqweqwdsqweqw!!.contains(geoqweqw455weqwe.toString())) {
                     linkqwejkhqwekqwj =
                         "$viewqweqwesdfwqe$sub1erwkjhrjkweh$depDataqweqweqwqweqwe&$sub3wqkejqwhejkqwh$afIdeqwdfjhfgh&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$deppqwekjqwhk"
                     shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
                     shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
+                    startActivity(Intent(this, InfluinitiActivity::class.java))
                     finish()
                 } else {
                     startActivity(Intent(this, GamefiAct::class.java))
@@ -136,7 +136,7 @@ class FilerMeNow : AppCompatActivity() {
                         "$viewqweqwesdfwqe$sub1erwkjhrjkweh$depDataqweqweqwqweqwe&$sub3wqkejqwhejkqwh$instIDqweqweqwdsdqwweqwe&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$deepeqwkjghegwweioqw"
                     shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
                     shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
+                    startActivity(Intent(this, InfluinitiActivity::class.java))
                     finish()
 
                     Toast.makeText(this, "Null FB", Toast.LENGTH_LONG).show()
@@ -144,7 +144,7 @@ class FilerMeNow : AppCompatActivity() {
                     linkqwejkhqwekqwj = "$viewqweqwesdfwqe$sub3wqkejqwhejkqwh$instIDqweqweqwdsdqwweqwe&$sub2qwekqwehqwejkqw$gaidqweqweqweqweasdasqwweqw&$sub4weqwjkegk$buildVerseqwejkqwewhegqwjheqwe&$sub5qwejqwhkejqwh$orgwqejkqheqjke"
                     shPqweqwfqffqwef.edit().putString("link", linkqwejkhqwekqwj).apply()
                     shPqweqwfqffqwef.edit().putString("ENTRY_CODE", "web").apply()
-                    startActivity(Intent(this, InfiActivity::class.java))
+                    startActivity(Intent(this, InfluinitiActivity::class.java))
                     finish()
                 } else {
                     startActivity(Intent(this, GamefiAct::class.java))

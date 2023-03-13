@@ -12,7 +12,7 @@ import android.webkit.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class InfiActivity : AppCompatActivity() {
+class InfluinitiActivity : AppCompatActivity() {
 
 
     private val INPUT_FILE_REQUEST_CODE_WEKQWHEJKQWEHQWKJEK = 1
@@ -42,10 +42,10 @@ class InfiActivity : AppCompatActivity() {
                     if (isInstalledjwekrhwkrjwehrkwejrhwjkr) {
                         val intentwejkeljkwlqkejqwklejqweqw = Intent(Intent.ACTION_VIEW)
                         intentwejkeljkwlqkejqwklejqweqw.data = Uri.parse(url)
-                        this@InfiActivity.startActivity(intentwejkeljkwlqkejqwklejqweqw)
+                        this@InfluinitiActivity.startActivity(intentwejkeljkwlqkejqwklejqweqw)
                     } else {
                         Toast.makeText(
-                            this@InfiActivity,
+                            this@InfluinitiActivity,
                             "Application is not installed",
                             Toast.LENGTH_LONG
                         ).show()
@@ -66,7 +66,7 @@ class InfiActivity : AppCompatActivity() {
                 description: String?,
                 failingUrl: String?
             ) {
-                Toast.makeText(this@InfiActivity, description, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@InfluinitiActivity, description, Toast.LENGTH_SHORT).show()
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
@@ -88,7 +88,7 @@ class InfiActivity : AppCompatActivity() {
                 try {
                     openChooserewrkljelrkjwerkwelrkwej()
                 } catch (e: java.lang.Exception) {
-                    Toast.makeText(this@InfiActivity, e.toString(), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@InfluinitiActivity, e.toString(), Toast.LENGTH_LONG).show()
                 }
                 return true
             }

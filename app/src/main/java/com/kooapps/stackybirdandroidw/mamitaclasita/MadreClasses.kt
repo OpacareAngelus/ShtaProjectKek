@@ -6,7 +6,7 @@ import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
 
 
-class MamaClass: Application() {
+class MadreClasses: Application() {
 
     companion object {
         var pampampapapapapapapapa: HashMap<String, String> = HashMap()

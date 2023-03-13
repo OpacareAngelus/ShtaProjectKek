@@ -1,9 +1,9 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.helperititka
 
 import android.content.Context
 import android.util.Log
 import com.facebook.applinks.AppLinkData
-import com.kooapps.stackybirdandroidw.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 
@@ -32,7 +32,7 @@ class Helper() {
 
     interface RequestA {
 
-        @GET("json/?key=LbwKKoO9eF4GLMz")
+        @GET("json/?key=15YX08nevlglWmq")
         fun getDataA() : Observable<RetroA>
     }
 }

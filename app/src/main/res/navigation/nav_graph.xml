@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentMenu">
     <fragment
         android:id="@+id/fragmentMenu"
-        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentMenu"
+        android:name="com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments.FragmentMenu"
         android:label="FragmentMenu">
         <action
             android:id="@+id/action_fragmentMenu_to_fragmentGame"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentGame"
-        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentGame"
+        android:name="com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments.FragmentGame"
         android:label="FragmentGame">
         <action
             android:id="@+id/action_fragmentGame_to_fragmentOver"
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentOver"
-        android:name="com.kooapps.stackybirdandroidw.gameActivity.fragments.FragmentOver"
+        android:name="com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments.FragmentOver"
         android:label="FragmentOver">
         <action
             android:id="@+id/action_fragmentOver_to_fragmentGame"

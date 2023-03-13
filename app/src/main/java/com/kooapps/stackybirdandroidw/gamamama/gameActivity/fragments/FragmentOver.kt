@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw.gameActivity.fragments
+package com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments
 
 import android.os.Bundle
 import android.view.View

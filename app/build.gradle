@@ -76,4 +76,6 @@ dependencies {
     def navGraphVersion = "2.5.3"
     implementation "androidx.navigation:navigation-fragment-ktx:$navGraphVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navGraphVersion"
+
+    implementation "com.airbnb.android:lottie:3.4.0"
 }

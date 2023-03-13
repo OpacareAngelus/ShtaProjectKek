@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw.gameActivity.fragments
+package com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments
 
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
@@ -123,7 +123,11 @@ class FragmentGame : BaseFragment<FragmentGameBinding>(FragmentGameBinding::infl
             }
             viewModel.timeSubject.observe(viewLifecycleOwner) {
                 if (it <= 0) {
-                    findNavController().navigate(FragmentGameDirections.actionFragmentGameToFragmentOver(viewModel.scoreSubject.value.toString()))
+                    findNavController().navigate(
+                        FragmentGameDirections.actionFragmentGameToFragmentOver(
+                            viewModel.scoreSubject.value.toString()
+                        )
+                    )
                 }
             }
         }

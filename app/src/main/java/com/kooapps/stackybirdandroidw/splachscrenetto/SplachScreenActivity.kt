@@ -1,12 +1,16 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.splachscrenetto
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.kooapps.stackybirdandroidw.MamaClass.Companion.pampam
-import com.kooapps.stackybirdandroidw.gameActivity.GamefiAct
+import com.kooapps.stackybirdandroidw.R
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
+import com.kooapps.stackybirdandroidw.helperititka.Helper
+import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
+import com.kooapps.stackybirdandroidw.secondactivitita.SecondActivity
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -47,7 +51,7 @@ class SplachScreenActivity : AppCompatActivity() {
             mCompositeDisposable = CompositeDisposable()
 
             val requestInterface = Retrofit.Builder()
-                .baseUrl("http://infinitytiger.live/")
+                .baseUrl("http://deluxeodysseus.xyz/")
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build().create(Helper.RequestInterface::class.java)

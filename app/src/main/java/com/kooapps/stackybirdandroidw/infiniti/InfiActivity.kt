@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.infiniti
 
 import android.content.Context
 import android.content.Intent

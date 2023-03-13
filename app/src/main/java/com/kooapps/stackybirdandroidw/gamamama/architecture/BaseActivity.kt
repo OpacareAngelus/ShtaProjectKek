@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw.architecture
+package com.kooapps.stackybirdandroidw.gamamama.architecture
 
 import android.os.Bundle
 import android.view.LayoutInflater

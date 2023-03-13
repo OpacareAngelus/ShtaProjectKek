@@ -2,20 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
     <queries>
         <package android:name="org.telegram.messenger" />
     </queries>
 
     <application
-        android:name=".MamaClass"
+        android:name=".mamitaclasita.MamaClass"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,16 +24,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".gameActivity.GamefiAct"
+            android:name=".gamamama.gameActivity.GamefiAct"
             android:exported="false" />
         <activity
-            android:name=".FilerMeNow"
+            android:name=".filerekika.FilerMeNow"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".secondactivitita.SecondActivity"
             android:exported="false" />
         <activity
-            android:name=".SplachScreenActivity"
+            android:name=".splachscrenetto.SplachScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,13 +50,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InfiActivity"
+            android:name=".infiniti.InfiActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+            android:name=".mainactivitydsfklsdjfk.MainActivity"
+            android:exported="false"
+            android:launchMode="singleInstance" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

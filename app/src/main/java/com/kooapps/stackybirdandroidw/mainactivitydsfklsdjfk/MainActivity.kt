@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.mainactivitydsfklsdjfk
 
 import android.app.Application
 import android.content.Context
@@ -9,7 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
-import com.kooapps.stackybirdandroidw.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.R
+import com.kooapps.stackybirdandroidw.filerekika.FilerMeNow
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Observer
 import io.reactivex.rxjava3.disposables.Disposable
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     }
         fun appsSign(application: Application, context: Context){
             AppsFlyerLib.getInstance()
-                .init("wbUYEXdhng7AsesjC2278R", conversionDataListener, application)
+                .init("dX6RPWf8UF6zHPtK3rifoJ", conversionDataListener, application)
             AppsFlyerLib.getInstance().start(context)
         }
 

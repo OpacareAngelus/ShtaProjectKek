@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.mamitaclasita
 
 import android.app.Application
 
@@ -16,10 +16,10 @@ class MamaClass: Application() {
         super.onCreate()
         OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
         OneSignal.initWithContext(this);
-        OneSignal.setAppId("8280201a-107d-4d29-9b81-a6b9a89e6ebf");
+        OneSignal.setAppId("b1264196-6357-4d62-8821-86289f3acce9");
         val trackerConfig = MyTracker.getTrackerConfig()
         trackerConfig.isTrackingLaunchEnabled = true
-        MyTracker.initTracker("76508847901597427684", this)
+        MyTracker.initTracker("22541511891516651603", this)
     }
 }
 

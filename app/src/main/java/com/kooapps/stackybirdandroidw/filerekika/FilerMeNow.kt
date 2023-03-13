@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw
+package com.kooapps.stackybirdandroidw.filerekika
 
 import android.content.Context
 import android.content.Intent
@@ -7,10 +7,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.appsflyer.AppsFlyerLib
+import com.kooapps.stackybirdandroidw.infiniti.InfiActivity
 import com.my.tracker.MyTracker
 import com.onesignal.OneSignal
-import com.kooapps.stackybirdandroidw.MamaClass.Companion.pampam
-import com.kooapps.stackybirdandroidw.gameActivity.GamefiAct
+import com.kooapps.stackybirdandroidw.mamitaclasita.MamaClass.Companion.pampam
+import com.kooapps.stackybirdandroidw.R
+import com.kooapps.stackybirdandroidw.gamamama.gameActivity.GamefiAct
 import org.json.JSONException
 import org.json.JSONObject
 

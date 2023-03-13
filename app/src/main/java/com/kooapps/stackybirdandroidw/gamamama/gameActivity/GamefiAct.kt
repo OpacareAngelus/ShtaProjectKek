@@ -1,6 +1,6 @@
-package com.kooapps.stackybirdandroidw.gameActivity
+package com.kooapps.stackybirdandroidw.gamamama.gameActivity
 
-import com.kooapps.stackybirdandroidw.architecture.BaseActivity
+import com.kooapps.stackybirdandroidw.gamamama.architecture.BaseActivity
 import com.kooapps.stackybirdandroidw.databinding.ActivityGamefiBinding
 
 

@@ -1,4 +1,4 @@
-package com.kooapps.stackybirdandroidw.gameActivity.fragments
+package com.kooapps.stackybirdandroidw.gamamama.gameActivity.fragments
 
 import android.graphics.Bitmap
 import androidx.lifecycle.LiveData
